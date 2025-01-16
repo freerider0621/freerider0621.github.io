@@ -1,7 +1,5 @@
 
 
-[![Chenkai Xu]]
-
 He is currently pursuing a Bachelor's Degree in Applied Economics, at School of Public Finance and Taxation, Southwestern University of Finance and Economics, China.
 
 #### Email
