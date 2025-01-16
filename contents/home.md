@@ -1,16 +1,15 @@
 
 
-[![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
+[![Chenkai Xu]]
 
-He is currently pursuing a Doctor's Degree in Computer Science, at School of Computer Science and Technology, China University of Mining and Technology, China.
+He is currently pursuing a Bachelor's Degree in Applied Economics, at School of Public Finance and Taxation, Southwestern University of Finance and Economics, China.
 
 #### Email
-sli[at]cumt.edu.cn
+42203063@smail.swufe.edu.cn
 
 #### Education
-M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025 (expected).\
-B.E., Data Science and Big Data Technology, China University of Mining and Technology, 2018—2022.
+B.E., Digital Public Finance&Taxation, Southwestern University of Finance and Economics, 2022—2026.
 
 #### Research Interests
-Deep Learning, Artificial Intelligence Seismology, Mine Microseismic.
+
 

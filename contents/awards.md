@@ -1,13 +1,10 @@
-- National Scholarship of Graduate Student, 2024.
+- National Scholarship of Graduate Student, 2023
 
-- First-prize Scholarship of CUMT, 2024.
+- National Second Prize in the National English Competition for College Students, 2023
 
-- First-prize Scholarship of CUMT, 2023.
+- First-prize Scholarship of SWUFE  three times, 2022-2024
 
-- Freshman Scholarship of CUMT, 2022.
+- National Second Prize in the Contemporary Undergraduate Mathematical Contest in Modeling, 2024
 
-- Excellent Graduation Project of Jiangsu Province, 2022.
+- State First Prize in the The Chinese Mathematics Competitions, 2024 
 
-- First-prize Enterprise Scholarship of CUMT, 2020.
-
-- First-prize Scholarship of CUMT, 2019.
