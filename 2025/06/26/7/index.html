@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="John Doe" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      MWG chapter1习题分享 
+      
+      
+    
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+
+  
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">LEEDOM</a>
+</div>
+
+
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="email" target="" href="xckxxy@163.com">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+</p>
+
+
+      <div class="main">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Jun 26, 2025
+  </h3>
+  <h1>
+    MWG chapter1习题分享
+  </h1>
+  <div class="content markdown-body">
+    <h2 id="习题1"><a href="#习题1" class="headerlink" title="习题1"></a>习题1</h2><p>设有一个选择结构 $(\mathscr{B}, C(\cdot))$，如果存在一个偏好关系 $\succsim$ 能对它进行理性化（即 $C(B) &#x3D; C^*(B, \succsim)$），那么该选择结构就满足<strong>路径不变性性质（path-invariance property）</strong>，即满足：</p>
+<p>对于任意一对预算集合 $B_1, B_2 \in \mathscr{B}$，只要它们的并集 $B_1 \cup B_2$ 属于 $\mathscr{B}$，且它们对应的选择集的并集 $C(B_1) \cup C(B_2)$ 也属于 $\mathscr{B}$，那么有：</p>
+<p>$$<br>C(B_1 \cup B_2) &#x3D; C(C(B_1) \cup C(B_2))<br>$$</p>
+<p>这就是说，决策问题可以被”安全地”拆解为子问题分别决策后再合并。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><p>设存在一个偏好关系 $\succsim$，能够对选择函数 $C(\cdot)$ 进行理性化，即对于任意预算集合 $B \in \mathscr{B}$，有：</p>
+<p>$$<br>C(B) &#x3D; { x \in B : x \succsim y \text{ for all } y \in B }<br>$$</p>
+<p>即 $C(B)$ 表示集合 $B$ 中所有相对于偏好 $\succsim$ 的极大元所构成的集合。</p>
+<p>令 $B_1, B_2 \in \mathscr{B}$ 且 $B_1 \cup B_2 \in \mathscr{B}$，我们考虑全集 $B &#x3D; B_1 \cup B_2$，并任取</p>
+<p>$$<br>x \in C(B_1 \cup B_2)<br>$$</p>
+<p>由定义，$x \succsim y$ 对所有 $y \in B_1 \cup B_2$ 成立。</p>
+<p>由于 $x \in B_1 \cup B_2$，不妨先设 $x \in B_1$。则对任意 $y \in B_1$，由于 $y \in B_1 \cup B_2$，故有 $x \succsim y$，即 $x$ 优于或无劣于 $B_1$ 中所有元素。因此：</p>
+<p>$$<br>x \in C(B_1)<br>$$</p>
+<p>同理，若 $x \in B_2$，则 $x \in C(B_2)$。从而我们有：</p>
+<p>$$<br>x \in C(B_1 \cup B_2) \Rightarrow x \in C(B_1) \cup C(B_2)<br>$$</p>
+<p>即：</p>
+<p>$$<br>C(B_1 \cup B_2) \subseteq C(B_1) \cup C(B_2)<br>$$</p>
+<p>很自然的，因为上式右集包含左集，$C$ 引导出来的</p>
+<p>$$<br>C(C(B_1 \cup B_2)) \subseteq C(C(B_1) \cup C(B_2)) \tag{1}<br>$$</p>
+<p>接下来考虑 $x \in C(C(B_1) \cup C(B_2))$。由于 $x$ 优于或无劣于 $C(B_1) \cup C(B_2)$ 中的任意元素，且这些元素本身已分别是 $B_1$ 与 $B_2$ 中最优的，因此：</p>
+<p>$$<br>\forall y \in B_1 \cup B_2, \exists z \in C(B_1) \cup C(B_2), z \succsim y<br>$$</p>
+<p>且 $x \succsim z$，由偏好关系的传递性可得：</p>
+<p>$$<br>x \succsim y \text{ 对所有 } y \in B_1 \cup B_2<br>$$</p>
+<p>因此 $x \in C(B_1 \cup B_2)$，从而有：</p>
+<p>$$<br>C(C(B_1) \cup C(B_2)) \subseteq C(B_1 \cup B_2) \tag{2}<br>$$</p>
+<p>综上$(1)$、$(2)$两式，最终我们证得：</p>
+<p>$$<br>C(B_1 \cup B_2) &#x3D; C(C(B_1) \cup C(B_2))<br>$$</p>
+<h2 id="习题2"><a href="#习题2" class="headerlink" title="习题2"></a>习题2</h2><h4 id="基本设定"><a href="#基本设定" class="headerlink" title="基本设定"></a>基本设定</h4><p>设 $X &#x3D; {x, y, z}$，考虑定义在集合族 $\mathscr{B} &#x3D; [{x, y}, {y, z}, {z, x}]$上的<strong>随机选择函数</strong> $C(\cdot)$，即对于每个 $B \in \mathscr{B}$，$C(B)$ 是定义在 $B$ 上的概率分布。例如，当 $B &#x3D; {x, y}$ 时，$C(B) &#x3D; (C_x(B), C_y(B))$，其中 $C_x(B), C_y(B) \geq 0$，且满足 $C_x(B) + C_y(B) &#x3D; 1$。</p>
+<p>我们称随机选择函数 $C(\cdot)$ <strong>可被偏好理性化</strong>，是指存在一个定义在所有 $X$ 上的六种严格偏好关系（即 $x \succ y \succ z$、$x \succ z \succ y$、…）上的概率分布 $\text{Pr}$，使得对任意集合 $B \in \mathscr{B}$，某元素 $x \in B$ 被选择的概率等于 $x$ 在所有将其排在 $B$ 中其他元素之前的偏好关系下的概率之和。举例而言，若 $B &#x3D; {x, y}$，则应有<br>$$<br>C_x({x, y}) &#x3D; \text{Pr}({\succ \in \mathscr{R} : x \succ y})<br>$$</p>
+<hr>
+<h4 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h4><ul>
+<li><p><strong>(a) 可理性化证明</strong>：需证明随机选择函数<br>$$<br>C({x, y}) &#x3D; C({y, z}) &#x3D; C({z, x}) &#x3D; \left(\frac{1}{2}, \frac{1}{2}\right)<br>$$<br>可被偏好理性化，即找到满足条件的概率分布 $\text{Pr}$。</p>
+</li>
+<li><p><strong>(b) 不可理性化证明</strong>：需证明随机选择函数<br>$$<br>C({x, y}) &#x3D; C({y, z}) &#x3D; C({z, x}) &#x3D; \left(\frac{1}{4}, \frac{3}{4}\right)<br>$$<br>不可被偏好理性化。</p>
+</li>
+<li><p><strong>(c) 临界值确定</strong>：确定 $0 &lt; \alpha &lt; 1$，使得<br>$$<br>C({x, y}) &#x3D; C({y, z}) &#x3D; C({z, x}) &#x3D; (\alpha, 1 - \alpha)<br>$$</p>
+</li>
+</ul>
+<h4 id="解答-1"><a href="#解答-1" class="headerlink" title="解答"></a>解答</h4><h5 id="概念明晰"><a href="#概念明晰" class="headerlink" title="概念明晰"></a>概念明晰</h5><p>设有一个有限集合 ${x, y, z}$，可以理解为三个备选项。</p>
+<p>我们不总是一次选出唯一的”最优”选项，而是用<strong>概率的方式</strong>在一组选项中做出选择。</p>
+<p>例如，对于两个选项 ${x, y}$，我们可能以 50% 和 50% 的概率分别选择 $x$ 和 $y$。这就定义了一个<strong>随机选择函数</strong> $C(\cdot)$：它描述了在每个选项集合中，选择每个元素的概率分布。</p>
+<p>由题目中给出的条件，我们只关心下面三个集合：</p>
+<ul>
+<li>${x, y}$</li>
+<li>${y, z}$</li>
+<li>${z, x}$</li>
+</ul>
+<p>对于每个集合 $B \in \mathscr{B}$，随机选择函数 $C(B)$ 给出在该集合中各元素被选中的概率，例如</p>
+<p>$$<br>C({x, y}) &#x3D; (C_x({x, y}), C_y({x, y})) &#x3D; (0.5, 0.5)<br>$$</p>
+<h5 id="接下来，什么叫”可以被偏好理性化”呢？"><a href="#接下来，什么叫”可以被偏好理性化”呢？" class="headerlink" title="接下来，什么叫”可以被偏好理性化”呢？"></a>接下来，什么叫”可以被偏好理性化”呢？</h5><p>这其实是这道题的核心。</p>
+<p>我们问：这个随机选择行为是否<strong>可以理解为是根据某种”隐藏的”偏好做出的？</strong></p>
+<p>更具体地：我们假设<strong>背后其实有一个概率分布定义在所有可能的严格偏好关系上</strong>，也就是说：</p>
+<blockquote>
+<p>有人心中是有偏好的，只不过他不是固定的偏好，而是比如 30% 认为 $x \succ y \succ z$，50% 认为 $y \succ z \succ x$，等等。</p>
+</blockquote>
+<p>严格偏好关系一共有 6 种（对 3 个元素的排列）：</p>
+<ol>
+<li>$x \succ y \succ z$</li>
+<li>$x \succ z \succ y$</li>
+<li>$y \succ x \succ z$</li>
+<li>$y \succ z \succ x$</li>
+<li>$z \succ x \succ y$</li>
+<li>$z \succ y \succ x$</li>
+</ol>
+<p>我们假设有个隐藏的概率分布 $\text{Pr}$ 分配在这 6 种偏好上（概率加起来为 1），然后我们说：</p>
+<blockquote>
+<p>在 ${x, y}$ 中选到 $x$ 的概率就是：所有”把 $x$ 排在 $y$ 前面”的偏好之和的概率。</p>
+</blockquote>
+<p>同理：</p>
+<ul>
+<li>$C_y({x, y}) &#x3D; \text{Pr}(\text{所有 } y \succ x \text{ 的偏好})$</li>
+<li>$C_z({y, z}) &#x3D; \text{Pr}(\text{所有 } z \succ y \text{ 的偏好})$</li>
+</ul>
+<p>这就是我理解的”偏好理性化”：把一个随机选择行为解释为”来自一个混合偏好分布的选择行为”。(有点像混合均衡里不同行动概率分布的解释)。概念理清楚了，我们来做题，因为第一题建立在第二第三题的基础上很好出来，我们先做第二第三题。</p>
+<h5 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h5><h3 id="b-不可理性化证明"><a href="#b-不可理性化证明" class="headerlink" title="(b) 不可理性化证明"></a>(b) 不可理性化证明</h3><p>我们考虑如下随机选择函数：</p>
+<p>$$<br>C({x, y}) &#x3D; C({y, z}) &#x3D; C({z, x}) &#x3D; \left(\frac{1}{4}, \frac{3}{4}\right)<br>$$</p>
+<p>即在任意两个元素的比较中，排在后者的选择概率始终为 $\frac{3}{4}$，前者为 $\frac{1}{4}$。</p>
+<p>若该随机选择函数可被偏好理性化，则应存在某一概率分布 $\text{Pr}$ 作用于 $X &#x3D; {x, y, z}$ 上的所有严格偏好关系（即六种可能的线性序），使得对于任意集合 $B \in \mathscr{B}$，每个元素被选择的概率等于其在所有偏好中战胜集合内其他元素的概率之和。</p>
+<p>根据定义，我们有：</p>
+<ul>
+<li>$\text{Pr}(x \succ y) &#x3D; \frac{1}{4}$</li>
+<li>$\text{Pr}(y \succ z) &#x3D; \frac{1}{4}$</li>
+<li>$\text{Pr}(z \succ x) &#x3D; \frac{1}{4}$</li>
+</ul>
+<p>那么上三式中至少有一个关系 $x \succ y$、$y \succ z$、$z \succ x$ 成立的概率不超过 $3 \times \frac{1}{4} &#x3D; \frac{3}{4}$，即：</p>
+<p>$$<br>\text{Pr}(x \succ y \cup y \succ z \cup z \succ x) \leq \frac{3}{4}<br>$$</p>
+<p>然而，<strong>任意一个线性偏好关系</strong>在三元集合上都必须满足偏好的传递性（见P13 Proposition1.D.2），也就是说，在任何一个完整严格偏好序中，三者之间<strong>必定至少有一个成立</strong>。更具体地说：</p>
+<ul>
+<li>如果 $x \not\succ y$（即 $y \succ x$），且</li>
+<li>$y \not\succ z$（即 $z \succ y$），</li>
+<li>那么由于偏好的传递性，必然有 $z \succ x$</li>
+</ul>
+<p>因此，不可能三者均不成立，所以三者中<strong>必有一者成立</strong>，这意味着：</p>
+<p>$$<br>\text{Pr}(x \succ y \cup y \succ z \cup z \succ x) &#x3D; 1<br>$$</p>
+<p>而我们前面推导出的结果是这个概率至多为 $\frac{3}{4}$，产生矛盾，所以此随机选择函数不可被偏好理性化。</p>
+<h3 id="c-找临界值"><a href="#c-找临界值" class="headerlink" title="(c) 找临界值"></a>(c) 找临界值</h3><p>我们考虑如下的随机选择函数：</p>
+<p>$$<br>C({x, y}) &#x3D; C({y, z}) &#x3D; C({z, x}) &#x3D; (\alpha, 1 - \alpha)<br>$$</p>
+<p>目标是确定在什么条件下该随机选择函数可以被<strong>偏好理性化</strong>，即是否存在一个偏好分布，使得该函数是从这一偏好分布中诱导出来的。</p>
+<h4 id="1-必要性分析：-alpha-in-1-3-2-3"><a href="#1-必要性分析：-alpha-in-1-3-2-3" class="headerlink" title="1. 必要性分析：$\alpha \in [1&#x2F;3, 2&#x2F;3]$"></a>1. 必要性分析：$\alpha \in [1&#x2F;3, 2&#x2F;3]$</h4><ul>
+<li><p>**下限 $\alpha \geq 1&#x2F;3$**：<br>对于偏好关系 $x \succ y$、$y \succ z$、$z \succ x$，由于每对选项中选择前者的概率为 $\alpha$，若这些偏好关系以概率 $\alpha$ 同时出现，那么至少有一个偏好关系成立的概率不能超过 $3\alpha$。<br>但如同 (b) 中所示，由于三者不可能同时都不成立（否则偏好传递性将导致矛盾），我们知道至少有一个偏好始终成立，其概率为 1，因此 $3\alpha \geq 1$，即 $\alpha \geq 1&#x2F;3$。</p>
+</li>
+<li><p>**上限 $\alpha \leq 2&#x2F;3$**：<br>将偏好顺序反转（即考虑 $y \succ x$、$z \succ y$、$x \succ z$），由于</p>
+<p>$$<br>C({y,x}) &#x3D; C({z,y}) &#x3D; C({x,z}) &#x3D; (1 - \alpha, \alpha)<br>$$</p>
+<p>套用同样的论证，我们有：</p>
+<p>$$<br>3(1 - \alpha) \geq 1 \Rightarrow \alpha \leq 2&#x2F;3<br>$$</p>
+</li>
+</ul>
+<p>因此，<strong>必要条件</strong>是：</p>
+<p>$$<br>\alpha \in [1&#x2F;3, 2&#x2F;3]<br>$$</p>
+<hr>
+<h4 id="2-充分性验证：-alpha-in-1-3-2-3-Rightarrow-可理性化"><a href="#2-充分性验证：-alpha-in-1-3-2-3-Rightarrow-可理性化" class="headerlink" title="2. 充分性验证：$\alpha \in [1&#x2F;3, 2&#x2F;3] \Rightarrow$ 可理性化"></a>2. 充分性验证：$\alpha \in [1&#x2F;3, 2&#x2F;3] \Rightarrow$ 可理性化</h4><p>构造一个满足条件的偏好分布如下：</p>
+<ul>
+<li><p>对以下三种偏好顺序：</p>
+<p>$$<br>x \succ y \succ z,\quad y \succ z \succ x,\quad z \succ x \succ y<br>$$</p>
+<p>分别赋予概率 $\alpha - 1&#x2F;3$；</p>
+</li>
+<li><p>对另外三种偏好顺序：</p>
+<p>$$<br>x \succ z \succ y,\quad y \succ x \succ z,\quad z \succ y \succ x<br>$$</p>
+<p>分别赋予概率 $2&#x2F;3 - \alpha$。</p>
+</li>
+</ul>
+<p>此时，每对选项中选到元素 $x$ 的概率恰为 $\alpha$，从而还原给定的随机选择函数。由于这些偏好顺序构成了所有可能的线性偏好（6 种），且概率分配总和为：</p>
+<p>$$<br>3(\alpha - 1&#x2F;3) + 3(2&#x2F;3 - \alpha) &#x3D; (\alpha - 1&#x2F;3 + 2&#x2F;3 - \alpha) \times 3 &#x3D; 1<br>$$</p>
+<p>因此，构造合理，满足偏好理性化的定义。</p>
+<hr>
+<h3 id="关键结论"><a href="#关键结论" class="headerlink" title="关键结论"></a>关键结论</h3><p>随机选择函数</p>
+<p>$$<br>C({x, y}) &#x3D; C({y, z}) &#x3D; C({z, x}) &#x3D; (\alpha, 1 - \alpha)<br>$$</p>
+<p><strong>可被偏好理性化的充要条件为</strong>：</p>
+<p>$$<br>\boxed{\alpha \in \left[\frac{1}{3}, \frac{2}{3}\right]}<br>$$</p>
+<h3 id="a-第一题解答"><a href="#a-第一题解答" class="headerlink" title="(a) 第一题解答"></a>(a) 第一题解答</h3><p>第一题中，我们让 $\alpha &#x3D; \frac{1}{2}$ 就可以了。由于 $\frac{1}{2} \in [\frac{1}{3}, \frac{2}{3}]$，根据上述分析，该随机选择函数可被偏好理性化。</p>
+<p>具体地，我们可以构造如下偏好分布：</p>
+<p>对于六种偏好关系：<br>$$<br>x \succ y \succ z,\quad x \succ z \succ y,\quad y \succ x \succ z,\quad y \succ z \succ x,\quad z \succ x \succ y,\quad z \succ y \succ x<br>$$</p>
+<p>分别赋予概率 $\frac{1}{6}$，即均匀分布。</p>
+<p>这样，每对选项中任一元素被选中的概率都恰好为 $\frac{1}{2}$，从而实现了偏好理性化。</p>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2025/05/07/6/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/2025/07/13/2/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="$ grep...">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>
