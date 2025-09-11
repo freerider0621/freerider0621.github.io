@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>度量空间的示例</title>
+      <link href="/2025/09/11/fanhan1/"/>
+      <url>/2025/09/11/fanhan1/</url>
+      
+        <content type="html"><![CDATA[<p>暑假的 GRE 顺利出分了，两个月的时间也足够让我忘掉上学期实变函数的知识，正好这道例题涉及到了勒贝格积分的一些知识，我来做一个梳理，方便我自己复习。</p><p><strong>题目：</strong></p><p>设 $X \subset \mathbf{R}^{n}$ 为 Lebesgue 可测集，$m$ 为其上的 Lebesgue 测度，且 $m(X) &lt; \infty$。记</p><p>$$<br>\mathscr{M}(X) &#x3D; { f: X \to \mathbf{R} \text{ 或 } \mathbf{C} \mid f \text{ 是 } X \text{ 上的 Lebesgue 可测函数} }.<br>$$</p><p>对任意 $f,g \in \mathscr{M}(X)$，定义</p><p>$$<br>d(f,g) &#x3D; \int_X \frac{|f(t)-g(t)|}{1+|f(t)-g(t)|}, dt .<br>$$</p><p>证明：若把 $\mathscr{M}(X)$ 中几乎处处相等的两个函数视为同一个函数，则 $d$ 满足度量的基本公理，从而使 $\mathscr{M}(X)$ 成为一个度量空间。</p><p><strong>证明：</strong></p><p>首先注意：若 $f,g$ 可测，则 $|f-g|$ 亦可测。函数</p><p>$$<br>\phi(u) &#x3D; \frac{u}{1+u}, \quad u \ge 0<br>$$</p><p>连续，因此 $\phi(|f-g|)$ 亦为可测函数。且显然 $0 \le \phi(u) &lt; 1$，因此对任意 $f,g$ 有</p><p>$$<br>0 \le \frac{|f(t)-g(t)|}{1+|f(t)-g(t)|} \le 1,<br>$$</p><p>于是</p><p>$$<br>d(f,g) \le \int_X 1,dt &#x3D; m(X) &lt; \infty,<br>$$</p><p>即被积函数可积且 $d(f,g)$ 有定义。</p><hr><ol><li><strong>非负性</strong><br>由于<br>$$<br>\frac{|f(t)-g(t)|}{1+|f(t)-g(t)|} \geq 0,<br>$$<br>故<br>$$<br>d(f,g) \geq 0.<br>$$</li></ol><hr><ol start="2"><li><p><strong>同一性</strong></p><ul><li><p><strong>充分性：</strong> 若 $f&#x3D;g$（处处或几乎处处），则<br>$$<br>\frac{|f(t)-g(t)|}{1+|f(t)-g(t)|} &#x3D; 0 \quad\text{几乎处处},<br>$$<br>因此 $d(f,g)&#x3D;0$。</p></li><li><p><strong>必要性：</strong> 我们需要证明：若 $d(f,g)&#x3D;0$，则 $f&#x3D;g$ 几乎处处成立。<br>令<br>$$<br>h(t) &#x3D; \frac{|f(t)-g(t)|}{1+|f(t)-g(t)|} \ge 0.<br>$$<br>已知<br>$$<br>\int_X h(t),dt &#x3D; 0.<br>$$<br>根据非负可测函数积分为零的性质，可得 $h(t)&#x3D;0$ 几乎处处。由于函数 $\varphi(u)&#x3D;\dfrac{u}{1+u}$ 在 $[0,\infty)$ 上严格单调且 $\varphi(u)&#x3D;0\iff u&#x3D;0$，由 $h&#x3D;0$ a.e. 可推出<br>$$<br>|f(t)-g(t)|&#x3D;0 \quad\text{几乎处处成立},<br>$$<br>即 $f&#x3D;g$ 几乎处处成立。此结论同时包含了 $f&#x3D;g$ 处处成立的情形（此时此集为空集，也是零测集）。</p></li></ul></li></ol><hr><ol start="3"><li><p><strong>对称性</strong></p><p>由绝对值的对称性直接得到<br>$$<br>d(f,g) &#x3D; \int_X \frac{|f(t)-g(t)|}{1+|f(t)-g(t)|},dt<br>   &#x3D; \int_X \frac{|g(t)-f(t)|}{1+|g(t)-f(t)|},dt<br>   &#x3D; d(g,f).<br>$$</p></li></ol><hr><ol start="4"><li><p><strong>三角不等式</strong></p><p>设 $f,g,h\in\mathscr{M}(X)$，对任意 $t\in X$ 记<br>$$<br>a &#x3D; |f(t)-g(t)|,\quad b &#x3D; |g(t)-h(t)|.<br>$$<br>由三角不等式有 $|f(t)-h(t)| \le a+b$。函数 $\phi(u)&#x3D;\dfrac{u}{1+u}$ 单调递增，故<br>$$<br>\frac{|f(t)-h(t)|}{1+|f(t)-h(t)|}<br>\le \frac{a+b}{1+a+b}.<br>$$<br>而对任意 $a,b\ge0$ 有代数不等式<br>$$<br>\frac{a+b}{1+a+b}&#x3D;\frac{a}{1+a+b}+\frac{b}{1+a+b} \le<br> \frac{a}{1+a} + \frac{b}{1+b},<br>$$</p></li></ol><p> 因此逐点成立<br>   $$<br>   \frac{|f(t)-h(t)|}{1+|f(t)-h(t)|}<br>   \le \frac{|f(t)-g(t)|}{1+|f(t)-g(t)|} + \frac{|g(t)-h(t)|}{1+|g(t)-h(t)|}.<br>   $$<br>   对两边在 $X$ 上积分，得<br>   $$<br>   d(f,h) \le d(f,g) + d(g,h).<br>   $$</p><hr><p>综上，$d$ 满足度量的基本公理，因此 $(\mathscr{M}(X),d)$ 是一个度量空间。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 泛函分析 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>讨价还价1</title>
       <link href="/2025/07/13/2/"/>
       <url>/2025/07/13/2/</url>
