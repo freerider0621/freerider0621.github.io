@@ -11,7 +11,7 @@
   
   <title>
     
-      Archives 
+      Szpilrajn 定理的应用 
       
       
     
@@ -33,6 +33,10 @@
 
 
   
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -71,90 +75,80 @@
 
 
       <div class="main">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2025</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="Szpilrajn 定理的应用">
-        <div class="time-m-d">10-08</div>
-        <div class="title">
-          <a href="/2025/10/08/Real1/">
-            
-              <span>Szpilrajn 定理的应用</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="optimal deadlines">
-        <div class="time-m-d">09-15</div>
-        <div class="title">
-          <a href="/2025/09/15/optimalDeadline/">
-            
-              <span>optimal deadlines</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="度量空间的示例">
-        <div class="time-m-d">09-11</div>
-        <div class="title">
-          <a href="/2025/09/11/fanhan1/">
-            
-              <span>度量空间的示例</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="讨价还价1">
-        <div class="time-m-d">07-13</div>
-        <div class="title">
-          <a href="/2025/07/13/2/">
-            
-              <span>讨价还价1</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="MWG chapter1习题分享">
-        <div class="time-m-d">06-26</div>
-        <div class="title">
-          <a href="/2025/06/26/7/">
-            
-              <span>MWG chapter1习题分享</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="西财随机过程例题">
-        <div class="time-m-d">05-07</div>
-        <div class="title">
-          <a href="/2025/05/07/6/">
-            
-              <span>西财随机过程例题</span>
-            
-          </a>
-        </div>
-      </div>
-    
+<div class="post">
+  <h3 class="date">
+    Oct 08, 2025
+  </h3>
+  <h1>
+    Szpilrajn 定理的应用
+  </h1>
+  <div class="content markdown-body">
+    <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h2 id="Szpilrajn-定理"><a href="#Szpilrajn-定理" class="headerlink" title="Szpilrajn 定理"></a>Szpilrajn 定理</h2><p>Szpilrajn 定理，也称线性扩展定理，表明：对于任意非空集合上的偏序，每个偏序都可以扩展为线性序。也就是说，如果 $(X, \succeq)$ 是偏序集合（满足自反、传递和反对称），那么存在一个线性序 $(X, \succeq^*)$ 使得</p>
+<p>$$<br>\succeq \subseteq \succeq^*.<br>$$</p>
+<p>这一定理的重要性在于，它保证了偏序可以被“补全”为完全可比较的顺序，从而在决策理论和序理论中具有广泛应用。</p>
+<hr>
+<h2 id="Exercise-10-来自REAL-ANALYSIS-with-ECONOMIC-APPLICATIONS"><a href="#Exercise-10-来自REAL-ANALYSIS-with-ECONOMIC-APPLICATIONS" class="headerlink" title="Exercise 10(来自REAL ANALYSIS with ECONOMIC APPLICATIONS)"></a>Exercise 10(来自REAL ANALYSIS with ECONOMIC APPLICATIONS)</h2><p>设 $(X, \succeq)$ 为一个预序集合（自反且传递），定义 $L(\succeq)$ 为所有扩展 $\succeq$ 的完全预序的集合。需要证明：</p>
+<p>$$<br>\succeq &#x3D; \bigcap_{\succeq’ \in L(\succeq)} \succeq’.<br>$$</p>
+<p>并说明 Szpilrajn 定理在证明中的作用。</p>
+<hr>
+<h2 id="详细解析"><a href="#详细解析" class="headerlink" title="详细解析"></a>详细解析</h2><p>首先，容易看出</p>
+<p>$$<br>\succeq \subseteq \bigcap_{\succeq’ \in L(\succeq)} \succeq’.<br>$$</p>
+<p>这是因为每个 $\succeq’ \in L(\succeq)$ 都是对 $\succeq$ 的扩展，所以 $\succeq$ 中的每对可比较元素在每个 $\succeq’$ 中都保持可比较。</p>
+<p>关键是证明反向包含，即</p>
+<p>$$<br>\bigcap_{\succeq’ \in L(\succeq)} \succeq’ \subseteq \succeq.<br>$$</p>
+<p>假设存在一对元素 $(x, y) \in X \times X$，满足 $x \not\succeq y$。为了完成反向包含，我们需要构造一个完全预序 $\widetilde{\succeq} \in L(\succeq)$，使得</p>
+<p>$$<br>x \not\widetilde{\succeq} y.<br>$$</p>
+<p>这一步是证明的核心。</p>
+<hr>
+<h3 id="1-对称部分与商集"><a href="#1-对称部分与商集" class="headerlink" title="1. 对称部分与商集"></a>1. 对称部分与商集</h3><p>先考虑 $\succeq$ 的对称部分 $\sim$，即</p>
+<p>$$<br>x \sim y \quad\text{当且仅当}\quad x \succeq y \text{ 且 } y \succeq x.<br>$$</p>
+<p>$\sim$ 是一个等价关系，将 $X$ 划分为若干等价类。记商集为 $X&#x2F;\sim$，并在商集上定义偏序 $\succeq^*$：</p>
+<p>$$<br>[x]_\sim \succeq^* [y]_\sim \quad\text{当且仅当}\quad x \succeq y.<br>$$</p>
+<p>由于 $x \not\succeq y$，可得</p>
+<p>$$<br>[x]_\sim \not\succeq^* [y]_\sim.<br>$$</p>
+<p>因此在商集上的偏序 $\succeq^*$ 中，$[x]_\sim$ 和 $[y]_\sim$ 之间没有这条顺序边。</p>
+<hr>
+<h3 id="2-构造偏序扩展"><a href="#2-构造偏序扩展" class="headerlink" title="2. 构造偏序扩展"></a>2. 构造偏序扩展</h3><p>为了保证构造的完全预序能够“区分” $x$ 和 $y$，在 $\succeq^*$ 上<strong>人为加入一条新边</strong>：</p>
+<p>$$<br>[y]_\sim \to [x]_\sim.<br>$$</p>
+<p>然后取传递闭包，得到偏序 $R$。也就是说，如果原来 $[a]_\sim \succeq^* [b]_\sim$ 且 $[b]_\sim \succeq^* [c]_\sim$，那么传递闭包保证 $[a]_\sim R [c]_\sim$。</p>
+<hr>
+<h3 id="3-为什么-R-没有循环"><a href="#3-为什么-R-没有循环" class="headerlink" title="3. 为什么 R 没有循环"></a>3. 为什么 R 没有循环</h3><p>这是证明反对称性（偏序要求）成立的关键。</p>
+<p>假设 R 中出现最短循环：</p>
+<p>$$<br>C_0 \to C_1 \to \dots \to  [y]_\sim \to  [x]_\sim \to \dots \to C_m &#x3D; C_0,<br>$$</p>
+<p>其中新边 $[y]_\sim \to [x]_\sim$ 只出现一次，其余边都来自原偏序 $\succeq^*$。如果去掉新边，循环就断开，剩余路径是一条从 $[x]_\sim$ 到 $[y]_\sim$ 的路径，仅由原偏序边组成。然而原偏序中 $[x]_\sim \not\succeq^* [y]_\sim$，因此这条路径不可能存在。矛盾说明 R 无循环，保持偏序性质。</p>
+<hr>
+<h3 id="4-应用-Szpilrajn-定理"><a href="#4-应用-Szpilrajn-定理" class="headerlink" title="4. 应用 Szpilrajn 定理"></a>4. 应用 Szpilrajn 定理</h3><p>此时，$R$ 是偏序。根据 Szpilrajn 定理，可以将 $R$ 扩展为线性序 $\overline{\succeq}^*$：</p>
+<p>$$<br>R \subseteq \overline{\succeq}^*.<br>$$</p>
+<p>再把它拉回原集合 $X$，定义</p>
+<p>$$<br>u \widetilde{\succeq} v \quad\iff\quad [u]_\sim \overline{\succeq}^* [v]_\sim.<br>$$</p>
+<p>得到的 $\widetilde{\succeq}$ 是完全预序，扩展了原来的 $\succeq$，并且满足 $x \not\widetilde{\succeq} y$。这就完成了反向包含的构造。</p>
+<hr>
+<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><p>根据两个方向的包含关系，我们得到：</p>
+<p>$$<br>\succeq &#x3D; \bigcap_{\succeq’ \in L(\succeq)} \succeq’.<br>$$</p>
+
   </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2025/09/15/optimalDeadline/">OLDER&nbsp;&gt;</a>
+      
+        
+            
 </div>
-
         <div class="footer">
   
     <div class="footer-more">
